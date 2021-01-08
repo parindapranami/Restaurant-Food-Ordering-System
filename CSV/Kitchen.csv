@@ -1,0 +1,27 @@
+table,order,qty,price,status
+5,Bharwa Bhindi,1,120,True
+5,Pindi Chana,1,140,True
+5,Kulche,1,30,True
+5,Dhokla,1,100,True
+5,Aloo Parantha,1,70,False
+5,Kadhi,1,120,True
+5,Hyderabadi Biryani,1,200,False
+5,Rogan Josh,1,200,False
+6,Pindi Chana,1,140,False
+6,Kulche,1,30,False
+6,Dhokla,1,100,False
+6,Aloo Parantha,1,70,False
+6,Kadhi,1,120,False
+6,Hyderabadi Biryani,1,200,False
+6,Rogan Josh,1,200,False
+5,Pindi Chana,1,140,False
+5,Dhokla,1,100,False
+5,Kadhi,1,120,False
+5,Hyderabadi Biryani,1,200,False
+5,Rogan Josh,1,200,False
+3,Fried Rice,1,100,True
+3,Stuffed Mushrooms,1,150,True
+3,Punjabi Chole,1,160,True
+4,Punjabi Chole,1,160,True
+4,Chana Masala,2,180,True
+4,Vegetable Korma,3,220,True
