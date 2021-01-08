@@ -4,6 +4,8 @@ import pandas as pd
 import tkinter.ttk as ttk
 from datetime import datetime
 
+# GST (Tax) VARIABLE
+GST = 0.18
 # Function for when button is pressed
 def button_bill() :
     # Reading CSV file
@@ -98,8 +100,6 @@ def button_bill() :
             df_bill["order"][j], df_bill["qty"][j], float(df_bill["price"][j]), float(df_bill["amount"][j])))
 
 
-# GST (Tax) VARIABLE
-GST = 0.18
 # Main Window
 root = Tk()
 root.title("Cafe Kill Me")  # ____Header Title
