@@ -19,3 +19,5 @@ the orders with status ‘True’ proceed for generation of the bill.
 The Checkout GUI is run by the cashier, it generates and displays the bill for the order of
 the selected table (Provided all orders are completed). After bill generation it clears the
 order from the Kitchen.
+
+The Database.csv file keeps a track of all the orders with completed payments along with a timestamp
