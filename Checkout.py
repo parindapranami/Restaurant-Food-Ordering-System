@@ -7,7 +7,6 @@ from datetime import datetime
 # GST (Tax) VARIABLE
 GST = 0.18
 
-
 # Function for when button is pressed
 def button_bill() :
     # Reading CSV file
