@@ -25,3 +25,12 @@ table,order,qty,price,status
 4,Punjabi Chole,1,160,True
 4,Chana Masala,2,180,True
 4,Vegetable Korma,3,220,True
+2,Paneer Tikka Masala,1,200,False
+2,Garlic Naan,1,45,False
+2,Mango Cheesecake,1,220,False
+2,Hakka Noodles,1,180,False
+2,Paneer Tikka Masala,1,200,False
+2,Kulche,1,40,False
+2,Garlic Naan,1,45,False
+2,Mango Cheesecake,1,220,False
+2,Hakka Noodles,1,180,False

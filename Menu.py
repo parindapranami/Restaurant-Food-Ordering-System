@@ -95,7 +95,7 @@ def order_button(*args):
     for i in range(len(to_kitchen["qty"].tolist())):
             if int(to_kitchen["qty"][i]) < 1:
                 to_kitchen.drop(i, inplace = True)
-    to_kitchen.to_csv("Kitchen.csv",mode='a',header=False,index=False)#___________FILE LOC HERE
+    to_kitchen.to_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv",mode='a',header=False,index=False)#___________FILE LOC HERE
     change_table()
     confirm()
 
@@ -104,7 +104,7 @@ def change_table(*args):
     Torder.configure(state='normal')
     Tstat.configure(state='normal')
     Tqty.configure(state='normal')
-    df_orders=pd.read_csv("Kitchen.csv") #__________________________________________FILE LOC HERE
+    df_orders=pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv") #__________________________________________FILE LOC HERE
     #Dropping orders of tables other than the selected table
     for n in range(len(df_orders["order"])):
         if int(df_orders["table"][n]) != int(table.get()):
@@ -237,7 +237,7 @@ Tstat.grid(row=0,column=3)
 Tstat.bind('<MouseWheel>', scrollwheel)    #Binding scrollwheel function to mouse-scroll event
 
 #_________reading menu dataframe
-df_dish = pd.read_csv("Menu.csv")#___________________________________FILE LOCATION HERE
+df_dish = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Menu.csv")#___________________________________FILE LOCATION HERE
 
 #_______________________Inserting Order and Price from menu into listbox
 for i in range(len(df_dish["Dish"])):

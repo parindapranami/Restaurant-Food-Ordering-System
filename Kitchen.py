@@ -6,10 +6,10 @@ import tkinter.ttk as ttk
 #___________________________________________________function for the Confirm Button for finishing Order
 def confirm(*args):
 
-    df_dish = pd.read_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv")                        #______________________________________________File Loc Here
+    df_dish = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv")                        #______________________________________________File Loc Here
     x = kitchen.item(kitchen.selection())['values'][0]
     df_dish.loc[x,"status"] = True            
-    df_dish.to_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv",index=False)                    #______________________________________________File Loc Here
+    df_dish.to_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv",index=False)                    #______________________________________________File Loc Here
 
 #_________________________________________Order Confirmation
     confirm_frame = Toplevel(relief='ridge', bd=20, bg='grey')
@@ -22,18 +22,18 @@ def confirm(*args):
 #_______________________________________________function for Refresh Button to Display Orders with status update 
 def refresh():
     kitchen.delete(*kitchen.get_children())
-    df_dish = pd.read_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv")#________________________________________________________________________File Loc Here
+    df_dish = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv")#________________________________________________________________________File Loc Here
     for i in range(len(df_dish["order"])):
         kitchen.insert(parent='',index='end',values=(i,df_dish["table"][i],df_dish["order"][i],df_dish["qty"][i],df_dish["status"][i]))     #inserting new values to treeview
 
 #________________________________________________function to cancel an order
 def cancel():
     
-    df_dish = pd.read_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv")                        #______________________________________________File Loc Here
+    df_dish = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv")                        #______________________________________________File Loc Here
     x = kitchen.item(kitchen.selection())['values'][0]
     
     df_dish.drop(x, inplace = True)           
-    df_dish.to_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv",index=False)                    #______________________________________________File Loc Here
+    df_dish.to_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv",index=False)                    #______________________________________________File Loc Here
 
 #__________________________________________________________________Order cancellation
     cancel_win_frame = Toplevel(relief='ridge', bd=20, bg='grey')
@@ -129,7 +129,7 @@ cancel = Button(cancel_button_frame,text="Cancel Order",font=('Arial',20,'bold')
 cancel.pack()
 
 #_______________________________________________________FILE Reading for Orders:
-df_dish = pd.read_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv")#_____________________________________________________File loc here
+df_dish = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv")#_____________________________________________________File loc here
 for i in range(len(df_dish["order"])):
     kitchen.insert(parent='',index='end',values=(i,df_dish["table"][i],df_dish["order"][i],df_dish["qty"][i],df_dish["status"][i]))     #inserting values to treeview
 

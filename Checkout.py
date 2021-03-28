@@ -9,8 +9,8 @@ GST = 0.18
 # Function for when button is pressed
 def button_bill() :
     # Reading CSV file
-    df_bill = pd.read_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv")  # _______________________FILENAME(Bill)
-    df_return = pd.read_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv")  # _______________________FILENAME(Return)
+    df_bill = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv")  # _______________________FILENAME(Bill)
+    df_return = pd.read_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv")  # _______________________FILENAME(Return)
     df_bill["amount"] = df_bill["qty"] * df_bill["price"]
 
     for i in range(len(df_bill["amount"])) :
@@ -37,9 +37,9 @@ def button_bill() :
     df_bill["time"] = now.replace(microsecond=0)  # Adding Timestamp to database
 
     # Updating KITCHEN and DATABASE CSV FILES
-    df_return.to_csv("D:\\Neel\\SE\\Python Project\\Kitchen.csv",
+    df_return.to_csv("D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Kitchen.csv",
                      index=False)  # ___________________________________FILENAME
-    df_bill.to_csv('D:\\Neel\\SE\\Python Project\\Database.csv', mode='a', header=False,
+    df_bill.to_csv('D:\Parinda\projects\Mini Project SE\Order_Management_System\Restaurant-Food-Ordering-System\CSV\Database.csv', mode='a', header=False,
                    index=False)  # ____________FILENAME
 
     if df_bill["amount"].sum() == 0 :  # Checking if table has any orders to charge a bill
